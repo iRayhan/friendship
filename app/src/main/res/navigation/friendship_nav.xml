@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/frienship_nav"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.irayhan.friendshipapplication.view.fragments.HomeFragment"
+        android:label="HomeFragment" >
+        <action
+            android:id="@+id/action_homeFragment_to_detailFragment"
+            app:destination="@id/detailFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.irayhan.friendshipapplication.view.fragments.DetailFragment"
+        android:label="DetailFragment" >
+
+        <argument android:name="friend"
+            app:argType="com.irayhan.friendshipapplication.models.ModelFriend"/>
+
+    </fragment>
+
+
+</navigation>
